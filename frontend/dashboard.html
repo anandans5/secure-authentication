@@ -1,194 +1,209 @@
-<div class="topbar">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div>
+<head>
 
-        <h1>Secure Authentication System</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <p>
-            Secure phone number authentication using OTP, JWT and a modular Express backend.
-        </p>
+    <title>Secure Authentication System</title>
 
-    </div>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>SecureAuth</h2>
+
+            <p>Authentication Dashboard</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li class="active">Overview</li>
+
+                <li>Security</li>
+
+                <li>Technology</li>
+
+                <li>Developer</li>
+
+            </ul>
+
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <h1>Secure Authentication System</h1>
+
+            <p>
+
+                A secure phone authentication project built using Express.js,
+                SQLite, JWT and Twilio SMS.
+
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card-box">
+
+                <h3>Project Overview</h3>
+
+                <p>
+
+                    This project demonstrates secure OTP authentication,
+                    JWT-based authorization and secure backend practices.
+
+                </p>
+
+            </div>
+
+            <div class="card-box">
+
+                <h3>Security Features</h3>
+
+                <ul class="list">
+
+                    <li>Phone OTP Authentication</li>
+
+                    <li>JWT Authentication</li>
+
+                    <li>OTP Expiration</li>
+
+                    <li>OTP Attempt Protection</li>
+
+                    <li>Rate Limiting</li>
+
+                    <li>Helmet Security Headers</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card-box">
+
+                <h3>Technology Stack</h3>
+
+                <div class="stack">
+
+                    <span>Node.js</span>
+
+                    <span>Express.js</span>
+
+                    <span>SQLite</span>
+
+                    <span>JWT</span>
+
+                    <span>Twilio</span>
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>JavaScript</span>
+
+                </div>
+
+            </div>
+
+            <div class="card-box">
+
+                <h3>Architecture</h3>
+
+<pre class="architecture">
+Client
+   │
+   ▼
+Express API
+   │
+   ▼
+Authentication Controller
+   │
+   ├── SQLite
+   └── Twilio
+</pre>
+
+            </div>
+
+            <div class="card-box">
+
+                <h3>Developer</h3>
+
+                <p>Anandan S</p>
+
+                <a href="https://linkedin.com/in/anandans05"
+                   target="_blank">
+
+                    LinkedIn Profile
+
+                </a>
+
+            </div>
+
+            <div class="card-box">
+
+                <h3>Project Statistics</h3>
+
+                <div class="stats">
+
+                    <div>
+
+                        <h2>8</h2>
+
+                        <small>Security Features</small>
+
+                    </div>
+
+                    <div>
+
+                        <h2>4</h2>
+
+                        <small>Authentication Layers</small>
+
+                    </div>
+
+                    <div>
+
+                        <h2>1</h2>
+
+                        <small>REST API</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
 
 </div>
 
-<div class="cards">
+<script src="script.js"></script>
 
-    <div class="card-box">
+</body>
 
-        <h3>Overview</h3>
-
-        <p>
-            This project demonstrates a complete authentication workflow using
-            Express.js, SQLite, Twilio SMS and JSON Web Tokens.
-            It follows a modular backend architecture with multiple security
-            controls to protect against common authentication attacks.
-        </p>
-
-    </div>
-
-    <div class="card-box">
-
-        <h3>Authentication</h3>
-
-        <div class="status">
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                Phone OTP
-
-            </div>
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                JWT Authentication
-
-            </div>
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                SQLite Storage
-
-            </div>
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                Twilio SMS
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="card-box">
-
-        <h3>Security</h3>
-
-        <div class="status">
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                Helmet
-
-            </div>
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                Rate Limiting
-
-            </div>
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                OTP Expiration
-
-            </div>
-
-            <div class="status-item">
-
-                <span class="dot success"></span>
-
-                OTP Attempt Protection
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="card-box">
-
-        <h3>Technology Stack</h3>
-
-        <div class="stack">
-
-            <span>Node.js</span>
-
-            <span>Express</span>
-
-            <span>SQLite</span>
-
-            <span>Twilio</span>
-
-            <span>JWT</span>
-
-            <span>Helmet</span>
-
-            <span>HTML</span>
-
-            <span>CSS</span>
-
-            <span>JavaScript</span>
-
-        </div>
-
-    </div>
-
-    <div class="card-box">
-
-        <h3>Developer</h3>
-
-        <p>
-            Anandan S
-        </p>
-
-        <a
-            href="https://linkedin.com/in/anandans05"
-            target="_blank">
-
-            LinkedIn
-
-        </a>
-
-    </div>
-
-    <div class="card-box">
-
-        <h3>Project Statistics</h3>
-
-        <div class="stats">
-
-            <div>
-
-                <h2>8</h2>
-
-                <small>Security Features</small>
-
-            </div>
-
-            <div>
-
-                <h2>4</h2>
-
-                <small>Authentication Layers</small>
-
-            </div>
-
-            <div>
-
-                <h2>1</h2>
-
-                <small>REST API</small>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+</html>
