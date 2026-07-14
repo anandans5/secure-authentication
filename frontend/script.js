@@ -30,6 +30,7 @@ async function sendOTP() {
 
     if (response.ok) {
         document.getElementById("otpSection").style.display = "block";
+        document.getElementById("otp").focus();
     }
 
 }

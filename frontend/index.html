@@ -3,153 +3,109 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Secure Authentication System</title>
+<title>SecureAuth</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <div class="dashboard">
+<div class="background"></div>
 
-        <aside class="sidebar">
+<div class="login-wrapper">
 
-            <div class="logo">
-                <h2>SecureAuth</h2>
-                <p>Authentication Dashboard</p>
+    <div class="login-card">
+
+        <div class="brand">
+
+            <h1>SecureAuth</h1>
+
+            <p>
+                Secure phone authentication powered by
+                Express.js, JWT and OTP verification.
+            </p>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Mobile Number</label>
+
+            <input
+                id="phone"
+                type="tel"
+                placeholder="+91 9876543210">
+
+        </div>
+
+        <button
+            class="primary-btn"
+            onclick="sendOTP()">
+
+            Send Verification Code
+
+        </button>
+
+        <div
+            id="otpSection"
+            class="otp-section">
+
+            <div class="input-group">
+
+                <label>Verification Code</label>
+
+                <input
+                    id="otp"
+                    type="text"
+                    maxlength="6"
+                    placeholder="Enter 6-digit OTP">
+
             </div>
 
-            <nav>
+            <button
+                class="primary-btn"
+                onclick="verifyOTP()">
 
-                <ul>
+                Verify & Continue
 
-                    <li class="active">Overview</li>
-
-                    <li>Security</li>
-
-                    <li>Technology</li>
-
-                    <li>Developer</li>
-
-                </ul>
-
-            </nav>
-
-            <button class="logout-btn" onclick="logout()">
-                Logout
             </button>
 
-        </aside>
+        </div>
 
+        <div class="security">
 
-        <main class="main">
+            <div>✓ JWT Authentication</div>
 
-            <div class="topbar">
+            <div>✓ OTP Verification</div>
 
-                <h1>Secure Authentication System</h1>
+            <div>✓ Express API</div>
 
-                <p>
-                    A secure phone authentication project built with modern backend
-                    technologies and industry-standard security practices.
-                </p>
+            <div>✓ Twilio SMS</div>
 
-            </div>
+        </div>
 
+        <div class="footer">
 
-            <div class="cards">
+            Developed by
+            <a
+                href="https://linkedin.com/in/anandans05"
+                target="_blank">
 
-                <div class="card-box">
+                Anandan S
 
-                    <h3>Project Overview</h3>
+            </a>
 
-                    <p>
-                        This project demonstrates a secure phone number authentication
-                        workflow using Express.js, SQLite, Twilio SMS and JWT.
-                        It follows a modular backend architecture with secure API
-                        design and authentication best practices.
-                    </p>
-
-                </div>
-
-                <div class="card-box">
-
-                    <h3>Security Features</h3>
-
-                    <ul class="list">
-
-                        <li>Phone OTP Authentication</li>
-                        <li>JWT Authentication</li>
-                        <li>OTP Expiration</li>
-                        <li>OTP Attempt Protection</li>
-                        <li>Rate Limiting</li>
-                        <li>Helmet Security Headers</li>
-
-                    </ul>
-
-                </div>
-
-                <div class="card-box">
-
-                    <h3>Technology Stack</h3>
-
-                    <div class="stack">
-
-                        <span>Node.js</span>
-                        <span>Express.js</span>
-                        <span>SQLite</span>
-                        <span>Twilio</span>
-                        <span>JWT</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-                </div>
-
-                <div class="card-box">
-
-                    <h3>Architecture</h3>
-
-<pre class="architecture">
-Client
-   │
-   ▼
-Express API
-   │
-   ▼
-Authentication Controller
-   │
-   ├── SQLite Database
-   └── Twilio SMS
-</pre>
-
-                </div>
-
-                <div class="card-box developer">
-
-                    <h3>Developer</h3>
-
-                    <p>Anandan S</p>
-
-                    <a href="https://linkedin.com/in/anandans05"
-                       target="_blank">
-
-                        LinkedIn Profile
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </main>
+        </div>
 
     </div>
+
+</div>
 
 <script src="script.js"></script>
 
